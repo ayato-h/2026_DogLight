@@ -1,0 +1,25 @@
+# OSが自動生成するファイル
+.DS_Store
+Thumbs.db
+
+# エディタの設定
+.vscode/
+.idea/
+
+# ログファイル
+*.log
+
+# 一時ファイル
+*.tmp
+*.swp
+
+# 環境変数・秘密情報
+.env
+.env.*
+!.env.example
+
+# 依存関係（将来npmを導入した場合）
+node_modules/
+
+# ビルド成果物（将来導入した場合）
+dist/

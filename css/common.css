@@ -1,0 +1,153 @@
+:root {
+  /* カラー設定 */
+  --canvas: #f8f4ee;
+  --surface: #fffdf9;
+  --surface-cool: #edf5fb;
+
+  /* ブランドカラー */
+  --navy: #0e3b5d;
+  --brand-blue: #39638a;
+  --accent: #39638a;
+
+  /* ブラウンカラー */
+  --brown: #76583f;
+  --brown-light: #a58a70;
+  --brown-soft: #eee3d5;
+
+  /* 文字色 */
+  --text: #76583f;
+  --muted: #9a8878;
+
+  --line: #e5d9cc;
+
+  /* スマホ画面の最大幅 */
+  --max-width: 430px;
+}
+
+/* 全要素のサイズ計算 */
+* {
+  box-sizing: border-box;
+}
+
+/* ページ全体 */
+html {
+  background: #e8e3dc;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #e8e3dc;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans JP",
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+}
+
+h1, h2, h3 {
+  color: var(--brown);
+}
+
+p {
+  color: var(--text);
+}
+
+/* リンク */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 入力・ボタンのフォント */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* スマホ画面の外枠 */
+.app-shell {
+  width: min(100%, var(--max-width));
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0 auto;
+  background: var(--canvas);
+}
+
+/* 通常画面 */
+.screen {
+  min-height: 100svh;
+  padding: 30px 22px 58px;
+}
+
+/* 認証画面（ログイン・登録など） */
+.screen--auth {
+  display: grid;
+  align-content: center;
+}
+
+.clock {
+ text-align: center;
+}
+
+#current-time {
+    margin: 0;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-variant-numeric: tabular-nums;
+}
+
+#current-date {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.menu-nav {
+    margin-top: 16px;
+    border: 3px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+    overflow: hidden;
+}
+
+.menu-nav a {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--brown);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.menu-nav a:hover {
+    background: var(--brown-soft);
+}
+
+/* スマホ以外の画面 */
+@media (min-width: 700px) {
+  body {
+    padding: 28px 0;
+  }
+
+  .app-shell {
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 16px 38px rgba(25, 39, 68, .12);
+  }
+}
+
+/* 小さいスマホ */
+@media (max-width: 350px) {
+  .screen {
+    padding-inline: 17px;
+  }
+}
