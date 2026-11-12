@@ -1,30 +1,89 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アラーム</title>
+    <title>あの日の朝 - ホーム</title>
     <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
     <div class="app-shell">
-        <main id="main-content" class="screen screen--auth">
-            <div class="clock">
+        <main id="main-content" class="screen screen--home">
+
+            <!-- ヘッダー -->
+            <header class="home-header">
+                <div class="logo">
+                    <span class="logo-icon">🐾</span>
+                    <span>あの日の朝</span>
+                </div>
+                <a href="pages/settings.html" class="settings-button">⚙</a>
+            </header>
+
+            <!-- 時計 -->
+            <section class="home-clock">
+                <p class="greeting">GOOD MORNING</p>
                 <h1 id="current-time">05:00:00</h1>
                 <p id="current-date"></p>
-            </div>
+                <p class="morning-message">
+                    おはようございます ☀
+                </p>
+            </section>
 
-            <nav class="menu-nav">
-                <a href="pages/album.html">アルバム</a>
-            </nav>
+            <!-- 愛犬の写真 -->
+            <section class="dog-section">
+                <div class="dog-photo">
+                    <img src="images/dogs.jpg" alt="なごみとるり">
+                </div>
+                <h2>なごみ と るり</h2>
+                <p>今日も一緒に、素敵な朝を。</p>
+            </section>
 
-            <nav class="menu-nav">
-                <a href="pages/voice.html">ボイス</a>
-            </nav>
+            <!-- アラーム情報 -->
+            <section class="alarm-card">
+                <div class="alarm-heading">
+                    <span>次のアラーム</span>
+                    <span class="alarm-status">ON</span>
+                </div>
+
+                <div class="alarm-info">
+                    <strong>05:00</strong>
+                    <span>愛犬の声で起きる</span>
+                </div>
+
+                <a href="pages/alarm.html" class="alarm-button">
+                    <span>◷</span>
+                    アラームを設定する
+                </a>
+            </section>
+
+            <!-- メニュー -->
+            <section class="home-menu">
+
+                <a href="pages/album.html" class="menu-card">
+                    <span class="menu-icon">♡</span>
+                    <span class="menu-title">思い出アルバム</span>
+                    <span class="menu-description">写真を見る</span>
+                </a>
+
+                <a href="pages/voice.html" class="menu-card">
+                    <span class="menu-icon">♫</span>
+                    <span class="menu-title">ボイス</span>
+                    <span class="menu-description">愛犬の声を聞く</span>
+                </a>
+
+            </section>
+
+            <!-- フッター -->
+            <footer class="home-footer">
+                いつでも、あの日の朝に。
+            </footer>
+
         </main>
     </div>
+
     <script src="js/clock.js"></script>
 </body>
 

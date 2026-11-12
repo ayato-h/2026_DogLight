@@ -132,6 +132,256 @@ textarea {
     background: var(--brown-soft);
 }
 
+
+/* =========================
+   ホーム画面
+========================= */
+
+.screen--home {
+    padding: 28px 22px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: #f8f4ee;
+}
+
+/* ヘッダー */
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--brown);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-icon {
+    font-size: 23px;
+}
+
+.settings-button {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--surface);
+    box-shadow: 4px 4px 9px #e8dfd4,
+                -4px -4px 9px #ffffff;
+    font-size: 19px;
+}
+
+/* 時計 */
+
+.home-clock {
+    text-align: center;
+    padding-top: 8px;
+}
+
+.greeting {
+    margin: 0 0 5px;
+    color: var(--brown-light);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.home-clock h1 {
+    margin: 0;
+    font-size: clamp(58px, 15vw, 76px);
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+#current-date {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.morning-message {
+    margin: 14px 0 0;
+    color: var(--brown);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* 愛犬の写真 */
+
+.dog-section {
+    text-align: center;
+}
+
+.dog-photo {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    overflow: hidden;
+    border-radius: 24px;
+    background: var(--brown-soft);
+    box-shadow: 5px 5px 12px #e6ddd2,
+                -5px -5px 12px #ffffff;
+}
+
+.dog-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dog-section h2 {
+    margin: 15px 0 5px;
+    font-size: 19px;
+}
+
+.dog-section p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* アラームカード */
+
+.alarm-card {
+    padding: 20px;
+    border-radius: 22px;
+    background: #efe5d8;
+    box-shadow: 5px 5px 12px #e5dacc,
+                -5px -5px 12px #ffffff;
+}
+
+.alarm-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--brown);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.alarm-status {
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: #dce8d6;
+    color: #64805c;
+    font-size: 11px;
+}
+
+.alarm-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0 18px;
+}
+
+.alarm-info strong {
+    color: var(--brown);
+    font-size: 37px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.alarm-info span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* アラーム設定ボタン */
+
+.alarm-button {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 16px;
+    background: var(--brown);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.alarm-button:hover {
+    background: var(--brown-light);
+}
+
+/* メニュー */
+
+.home-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+.menu-card {
+    min-height: 120px;
+    padding: 17px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 20px;
+    background: var(--surface);
+    box-shadow: 4px 4px 10px #e8dfd4,
+                -4px -4px 10px #ffffff;
+    transition: 0.2s;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+}
+
+.menu-icon {
+    color: var(--brown-light);
+    font-size: 25px;
+}
+
+.menu-title {
+    color: var(--brown);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.menu-description {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* フッター */
+
+.home-footer {
+    padding: 5px 0;
+    color: var(--brown-light);
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* 小さいスマホ */
+
+@media (max-width: 350px) {
+    .screen--home {
+        padding-inline: 17px;
+        gap: 20px;
+    }
+
+    .alarm-info strong {
+        font-size: 31px;
+    }
+}
+
+
 /* スマホ以外の画面 */
 @media (min-width: 700px) {
   body {
