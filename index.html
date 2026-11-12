@@ -1,20 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doglight - ホーム</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐕</text></svg>">
+    <title>Dog Light - ホーム</title>
+    <link rel="icon" href="http://127.0.0.1:5500/images/icon.png?v=10" type="image/png">
     <link rel="stylesheet" href="css/common.css">
 </head>
 
 <body>
     <div class="app-shell">
         <main id="main-content" class="screen screen--home">
-
-            <!-- ヘッダー -->
             <header class="home-header">
                 <div class="logo">
                     <span class="logo-icon">🐾</span>
@@ -22,64 +19,81 @@
                 </div>
                 <a href="pages/settings.html" class="settings-button">⚙</a>
             </header>
-
-            <!-- 時計 -->
             <section class="home-clock">
                 <h1 id="current-time">05:00:00</h1>
                 <p id="current-date"></p>
             </section>
-
-            <!-- 愛犬の写真 -->
             <section class="dog-section">
                 <div class="dog-photo">
                     <img src="images/dog.png" alt="なごみとるり">
                 </div>
             </section>
-
-            <!-- アラーム情報 -->
             <section class="alarm-card">
                 <div class="alarm-heading">
-                    <span>次のアラーム</span>
-                    <span class="alarm-status">ON</span>
+                    <span>アラーム一覧</span>
                 </div>
-
-                <div class="alarm-info">
-                    <strong>05:00</strong>
-                    <span>愛犬の声で起きる</span>
+                <div id="alarm-list">
+                    <div class="alarm-info">
+                        <div class="alarm-content">
+                            <strong>05:00</strong>
+                            <div class="voice-options">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span>るり</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span>なごみ</span>
+                                </label>
+                            </div>
+                        </div>
+                        <label class="alarm-toggle">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="alarm-info">
+                        <div class="alarm-content">
+                            <strong>05:30</strong>
+                            <div class="voice-options">
+                                <label>
+                                    <input type="checkbox" checked>
+                                    <span>るり</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    <span>なごみ</span>
+                                </label>
+                            </div>
+                        </div>
+                        <label class="alarm-toggle">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
                 </div>
-
-                <a href="pages/alarm.html" class="alarm-button">
-                    <span>◷</span>
-                    アラームを設定する
-                </a>
+                <button type="button" id="add-alarm" class="alarm-add-button">＋</button>
             </section>
 
-            <!-- メニュー -->
             <section class="home-menu">
-
                 <a href="pages/album.html" class="menu-card">
                     <span class="menu-icon">♡</span>
                     <span class="menu-title">思い出アルバム</span>
                     <span class="menu-description">写真を見る</span>
                 </a>
-
                 <a href="pages/voice.html" class="menu-card">
                     <span class="menu-icon">♫</span>
                     <span class="menu-title">ボイス</span>
                     <span class="menu-description">愛犬の声を聞く</span>
                 </a>
-
             </section>
-
-            <!-- フッター -->
-            <footer class="home-footer">
-                いつでも、あの日の朝に。
-            </footer>
-
+            <footer class="home-footer">いつでも、あの日の朝に。</footer>
         </main>
     </div>
 
     <script src="js/clock.js"></script>
+    <script src="js/alarm-list.js"></script>
+
 </body>
 
 </html>

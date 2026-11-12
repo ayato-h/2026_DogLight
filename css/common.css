@@ -321,6 +321,164 @@ textarea {
     transition: 0.2s;
 }
 
+
+/* アラーム追加ボタン */
+
+.alarm-add-button {
+    width: 42px;
+    height: 42px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--brown);
+    font-size: 25px;
+    font-weight: 400;
+
+    box-shadow:
+        4px 4px 9px #e5dacc,
+        -4px -4px 9px #ffffff;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.alarm-add-button:hover {
+    background: var(--brown-soft);
+    transform: scale(1.08);
+}
+
+.alarm-add-button:active {
+    transform: scale(0.95);
+}
+
+/* 追加されたアラーム */
+
+
+/* アラーム情報 */
+
+.alarm-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+}
+
+.alarm-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.alarm-detail strong {
+    color: var(--brown);
+    font-size: 37px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.alarm-detail span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* トグル */
+
+.alarm-toggle {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 27px;
+    flex-shrink: 0;
+}
+
+.alarm-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background: #c9bdb0;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.alarm-toggle input:checked + .toggle-slider {
+    background: #829b75;
+}
+
+.alarm-toggle input:checked + .toggle-slider::before {
+    transform: translateX(21px);
+}
+
+/* アラーム情報 */
+
+.alarm-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px; /* 時刻とボイス選択の間隔 */
+}
+
+/* ボイス選択 */
+
+.voice-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.voice-options label {
+    cursor: pointer;
+}
+
+.voice-options input {
+    display: none;
+}
+
+.voice-options span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px; /* 幅を固定 */
+    height: 32px;
+
+    border: 1px solid var(--brown-light);
+    border-radius: 20px;
+    color: var(--brown);
+    background: var(--surface);
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.voice-options input:checked + span {
+    background: var(--brown);
+    border-color: var(--brown);
+    color: white;
+}
+
 .alarm-button:hover {
     background: var(--brown-light);
 }
@@ -366,6 +524,7 @@ textarea {
 .menu-description {
     color: var(--muted);
     font-size: 11px;
+    font-weight: bold;
 }
 
 /* フッター */
@@ -375,6 +534,7 @@ textarea {
     color: var(--brown-light);
     text-align: center;
     font-size: 11px;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
