@@ -1,0 +1,157 @@
+
+/* =========================
+   アルバム画面
+========================= */
+
+/* 写真追加エリア */
+
+.album-add-section {
+    width: 100%;
+}
+
+.album-add-button {
+    width: 100%;
+    min-height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    border: 2px dashed var(--brown-light);
+    border-radius: 16px;
+
+    background: var(--surface);
+    color: var(--brown);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.album-add-button:hover {
+    background: var(--brown-soft);
+}
+
+.album-add-icon {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+
+/* 登録済み写真一覧 */
+
+.album-list-section {
+    width: 100%;
+    padding: 20px;
+
+    border-radius: 22px;
+    background: var(--brown-soft);
+
+    box-shadow:
+        5px 5px 12px #e5dacc,
+        -5px -5px 12px #ffffff;
+}
+
+.album-list-section h2 {
+    margin: 0 0 12px;
+    color: var(--brown);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.album-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 写真1件分 */
+
+.album-item {
+    width: 100%;
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 2px;
+
+    border-bottom: 1px solid #dfd0c0;
+}
+
+.album-item:last-child {
+    border-bottom: none;
+}
+
+
+/* 写真 */
+
+.album-photo {
+    width: 66px;
+    height: 66px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+    border-radius: 12px;
+
+    background: var(--surface);
+}
+
+
+/* 写真の説明 */
+
+.album-description {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.album-caption {
+    color: var(--brown);
+    font-size: 13px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.album-dog-name {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* 削除ボタン */
+
+.album-delete-button {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #f3e6df;
+    color: #a16f5c;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.album-delete-button:hover {
+    background: #e5d5c4;
+}

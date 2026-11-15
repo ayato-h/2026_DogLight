@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
 
 <body>
     <div class="app-shell">
-        <main id="main-content" class="screen screen--auth">
+        <main id="main-content" class="screen screen--home">
             <header class="home-header">
                 <div class="logo">
                     <span class="logo-icon"><a href="../index.html">＜</a></span>
@@ -20,9 +20,58 @@
                 </div>
                 <a href="settings.html" class="settings-button">⚙</a>
             </header>
-            <nav class="menu-nav">
-                <a href="../index.html">トップページに戻る</a>
-            </nav>
+            <section class="album-add-section">
+                <label for="photo-input" class="album-add-button">
+                    <span class="album-add-icon">＋</span>
+                    <span>写真を追加</span>
+                </label>
+                <input type="file" id="photo-input" accept="image/*" multiple hidden>
+            </section>
+
+            <!-- 登録済み写真 -->
+            <section class="album-list-section">
+                <h2>登録した写真</h2>
+
+                <div class="album-list" id="album-list">
+
+                    <!-- 写真1 -->
+                    <article class="album-item">
+                        <img src="../images/dog.png" alt="なごみの写真" class="album-photo">
+
+                        <div class="album-description">
+                            <span class="album-caption">
+                                いとことお散歩した日
+                            </span>
+                            <span class="album-dog-name">なごみ</span>
+                        </div>
+
+                        <button type="button" class="album-delete-button" aria-label="写真を削除">
+                            削除
+                        </button>
+                    </article>
+
+                    <!-- 写真2 -->
+                    <article class="album-item">
+                        <img src="../images/dog.png" alt="るりの写真" class="album-photo">
+
+                        <div class="album-description">
+                            <span class="album-caption">
+                                初めてのお出かけ
+                            </span>
+                            <span class="album-dog-name">るり</span>
+                        </div>
+
+                        <button type="button" class="album-delete-button" aria-label="写真を削除">
+                            削除
+                        </button>
+                    </article>
+
+                </div>
+            </section>
+
+            <footer class="home-footer">
+                いつでも、あの日の朝に。
+            </footer>
         </main>
     </div>
 </body>
