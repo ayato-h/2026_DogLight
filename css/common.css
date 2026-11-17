@@ -500,7 +500,7 @@ textarea {
     justify-content: center;
 
     border-radius: 25px;
-    background: var(--surface);
+    background: #efe5d8;
 
     box-shadow:
         5px 5px 12px #e8dfd4,
@@ -514,7 +514,7 @@ textarea {
 }
 
 .menu-icon {
-    color: var(--brown-light);
+    color: var(--brown);
     font-size: 48px;
     font-weight: 400;
 }
