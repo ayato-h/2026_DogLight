@@ -1,64 +1,66 @@
 :root {
-  /* カラー設定 */
-  --canvas: #f8f4ee;
-  --surface: #fffdf9;
-  --surface-cool: #edf5fb;
+    /* カラー設定 */
+    --canvas: #f8f4ee;
+    --surface: #fffdf9;
+    --surface-cool: #edf5fb;
 
-  /* ブランドカラー */
-  --navy: #0e3b5d;
-  --brand-blue: #39638a;
-  --accent: #39638a;
+    /* ブランドカラー */
+    --navy: #0e3b5d;
+    --brand-blue: #39638a;
+    --accent: #39638a;
 
-  /* ブラウンカラー */
-  --brown: #76583f;
-  --brown-light: #a58a70;
-  --brown-soft: #eee3d5;
+    /* ブラウンカラー */
+    --brown: #76583f;
+    --brown-light: #a58a70;
+    --brown-soft: #eee3d5;
 
-  /* 文字色 */
-  --text: #76583f;
-  --muted: #9a8878;
+    /* 文字色 */
+    --text: #76583f;
+    --muted: #9a8878;
 
-  --line: #e5d9cc;
+    --line: #e5d9cc;
 
-  /* スマホ画面の最大幅 */
-  --max-width: 430px;
+    /* スマホ画面の最大幅 */
+    --max-width: 430px;
 }
 
 /* 全要素のサイズ計算 */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* ページ全体 */
 html {
-  background: #e8e3dc;
+    background: #e8e3dc;
 }
 
 body {
-  margin: 0;
-  color: var(--text);
-  background: #e8e3dc;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Noto Sans JP",
-    "Hiragino Sans",
-    "Yu Gothic",
-    sans-serif;
+    margin: 0;
+    color: var(--text);
+    background: #e8e3dc;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Noto Sans JP",
+        "Hiragino Sans",
+        "Yu Gothic",
+        sans-serif;
 }
 
-h1, h2, h3 {
-  color: var(--brown);
+h1,
+h2,
+h3 {
+    color: var(--brown);
 }
 
 p {
-  color: var(--text);
+    color: var(--text);
 }
 
 /* リンク */
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 /* 入力・ボタンのフォント */
@@ -66,32 +68,32 @@ button,
 input,
 select,
 textarea {
-  font: inherit;
+    font: inherit;
 }
 
 /* スマホ画面の外枠 */
 .app-shell {
-  width: min(100%, var(--max-width));
-  min-height: 100vh;
-  min-height: 100svh;
-  margin: 0 auto;
-  background: var(--canvas);
+    width: min(100%, var(--max-width));
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0 auto;
+    background: var(--canvas);
 }
 
 /* 通常画面 */
 .screen {
-  min-height: 100svh;
-  padding: 30px 22px 58px;
+    min-height: 100svh;
+    padding: 30px 22px 58px;
 }
 
 /* 認証画面（ログイン・登録など） */
 .screen--auth {
-  display: grid;
-  align-content: center;
+    display: grid;
+    align-content: center;
 }
 
 .clock {
- text-align: center;
+    text-align: center;
 }
 
 #current-time {
@@ -175,7 +177,7 @@ textarea {
     border-radius: 50%;
     background: var(--surface);
     box-shadow: 4px 4px 9px #e8dfd4,
-                -4px -4px 9px #ffffff;
+        -4px -4px 9px #ffffff;
     font-size: 19px;
 }
 
@@ -265,7 +267,7 @@ textarea {
     border-radius: 22px;
     background: #efe5d8;
     box-shadow: 5px 5px 12px #e5dacc,
-                -5px -5px 12px #ffffff;
+        -5px -5px 12px #ffffff;
 }
 
 .alarm-heading {
@@ -424,11 +426,11 @@ textarea {
     transition: 0.3s;
 }
 
-.alarm-toggle input:checked + .toggle-slider {
+.alarm-toggle input:checked+.toggle-slider {
     background: #829b75;
 }
 
-.alarm-toggle input:checked + .toggle-slider::before {
+.alarm-toggle input:checked+.toggle-slider::before {
     transform: translateX(21px);
 }
 
@@ -437,7 +439,8 @@ textarea {
 .alarm-content {
     display: flex;
     flex-direction: column;
-    gap: 14px; /* 時刻とボイス選択の間隔 */
+    gap: 14px;
+    /* 時刻とボイス選択の間隔 */
 }
 
 /* ボイス選択 */
@@ -461,7 +464,8 @@ textarea {
     align-items: center;
     justify-content: center;
 
-    width: 75px; /* 幅を固定 */
+    width: 75px;
+    /* 幅を固定 */
     height: 32px;
 
     border: 1px solid var(--brown-light);
@@ -472,7 +476,7 @@ textarea {
     transition: 0.2s;
 }
 
-.voice-options input:checked + span {
+.voice-options input:checked+span {
     background: var(--brown);
     border-color: var(--brown);
     color: white;
@@ -482,41 +486,88 @@ textarea {
     background: var(--brown-light);
 }
 
-/* メニュー */
-
-/* メニュー */
-
 .home-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 14px;
 }
 
 .menu-card {
-    min-height: 110px;
-
+    position: relative;
+    min-height: 155px;
+    padding: 17px 12px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    border-radius: 25px;
-    background: #efe5d8;
-
+    gap: 12px;
+    border-radius: 24px;
+    background: var(--surface);
     box-shadow:
         5px 5px 12px #e8dfd4,
         -5px -5px 12px #ffffff;
-
-    transition: 0.2s;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    overflow: hidden;
 }
 
 .menu-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
+
+/* アイコンの背景 */
+
+.menu-icon-wrap {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--brown-soft);
+    box-shadow:
+        inset 2px 2px 5px rgba(165, 138, 112, 0.12),
+        3px 3px 7px rgba(118, 88, 63, 0.08);
+}
+
+/* メインアイコン */
 
 .menu-icon {
     color: var(--brown);
-    font-size: 48px;
-    font-weight: 400;
+    font-size: 34px;
+    line-height: 1;
+}
+
+.menu-icon svg {
+    width: 34px;
+    height: 34px;
+}
+
+/* アイコンの小さな装飾 */
+
+.menu-decoration {
+    position: absolute;
+    top: -3px;
+    right: -5px;
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fffdf9;
+    color: var(--brown-light);
+    font-size: 13px;
+    box-shadow: 2px 2px 5px rgba(118, 88, 63, 0.12);
+}
+
+/* メニューの文字 */
+
+.menu-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 .menu-title {
@@ -527,19 +578,16 @@ textarea {
 
 .menu-description {
     color: var(--muted);
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 10px;
 }
 
-/* フッター */
-
-.home-footer {
-    padding: 5px 0;
+/* 右上の矢印 */
+.menu-arrow {
+    position: absolute;
+    top: 12px;
+    right: 14px;
     color: var(--brown-light);
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 13px;
 }
 
 /* 小さいスマホ */
@@ -558,20 +606,20 @@ textarea {
 
 /* スマホ以外の画面 */
 @media (min-width: 700px) {
-  body {
-    padding: 28px 0;
-  }
+    body {
+        padding: 28px 0;
+    }
 
-  .app-shell {
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0 16px 38px rgba(25, 39, 68, .12);
-  }
+    .app-shell {
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0 16px 38px rgba(25, 39, 68, .12);
+    }
 }
 
 /* 小さいスマホ */
 @media (max-width: 350px) {
-  .screen {
-    padding-inline: 17px;
-  }
+    .screen {
+        padding-inline: 17px;
+    }
 }
