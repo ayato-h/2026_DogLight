@@ -1,0 +1,106 @@
+
+/* 音声一覧 */
+.voice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 音声カード */
+.voice-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 20px;
+    min-height: 95px;
+
+    border-radius: 22px;
+    background: #efe5d8;
+
+    box-shadow:
+        5px 5px 12px #e5dacc,
+        -5px -5px 12px #ffffff;
+}
+
+/* 再生ボタン */
+.voice-play {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border: none;
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--brown);
+
+    font-size: 17px;
+    cursor: pointer;
+
+    box-shadow:
+        3px 3px 8px #e5dacc,
+        -3px -3px 8px #ffffff;
+
+    transition: 0.2s;
+}
+
+.voice-play:hover {
+    background: var(--brown-soft);
+    transform: scale(1.08);
+}
+
+.voice-play:active {
+    transform: scale(0.95);
+}
+
+/* 音声情報 */
+.voice-content {
+    flex: 1;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.voice-content strong {
+    color: var(--brown);
+    font-size: 15px;
+}
+
+/* 音声の波形 */
+.voice-wave {
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.voice-wave span {
+    width: 4px;
+    height: var(--h);
+
+    border-radius: 10px;
+    background: var(--brown-light);
+    opacity: 0.8;
+}
+
+/* 小さいスマホ */
+@media (max-width: 350px) {
+    .voice-card {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .voice-wave {
+        gap: 3px;
+    }
+
+    .voice-wave span {
+        width: 3px;
+    }
+}
