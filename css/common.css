@@ -110,30 +110,6 @@ textarea {
     font-size: 14px;
 }
 
-.menu-nav {
-    margin-top: 16px;
-    border: 3px solid var(--line);
-    border-radius: 16px;
-    background: var(--surface);
-    overflow: hidden;
-}
-
-.menu-nav a {
-    min-height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--brown);
-    font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background 0.2s ease;
-}
-
-.menu-nav a:hover {
-    background: var(--brown-soft);
-}
-
 
 /* =========================
    ホーム画面
