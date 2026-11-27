@@ -149,28 +149,32 @@
 ========================= */
 
 .album-delete-button {
-    width: 34px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     flex-shrink: 0;
 
     display: grid;
     place-items: center;
 
     border: none;
-    border-radius: 50%;
-
-    background: #f3e2df;
-    color: #ad7770;
+    background: transparent;
+    color: #C46F65;
 
     cursor: pointer;
-    transition: 0.2s;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.album-delete-button svg {
+    width: 22px;
+    height: 22px;
 }
 
 .album-delete-button:hover {
-    background: #ebd2ce;
-    transform: scale(1.08);
+    color: #B85C57;
+    transform: scale(1.1);
 }
 
 .album-delete-button:active {
-    transform: scale(0.95);
+    color: #963F3B;
+    transform: scale(0.9);
 }
