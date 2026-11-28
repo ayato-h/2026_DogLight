@@ -1,4 +1,3 @@
-
 /* 音声一覧 */
 .voice-list {
     display: flex;
@@ -10,7 +9,6 @@
 .voice-card {
     display: flex;
     align-items: center;
-    gap: 16px;
 
     padding: 20px;
     min-height: 95px;
@@ -22,7 +20,6 @@
         5px 5px 12px #e5dacc,
         -5px -5px 12px #ffffff;
 }
-
 /* 再生ボタン */
 .voice-play {
     width: 46px;
@@ -70,9 +67,18 @@
     color: var(--brown);
     font-size: 15px;
 }
+/* 再生ボタン・波形・削除ボタン */
+.voice-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
 
-/* 音声の波形 */
+/* 波形 */
 .voice-wave {
+    flex: 1;
+    min-width: 0;
     height: 35px;
 
     display: flex;
@@ -87,6 +93,41 @@
     border-radius: 10px;
     background: var(--brown-light);
     opacity: 0.8;
+}
+
+/* =========================
+   音声削除ボタン
+========================= */
+
+.voice-delete {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border: none;
+    background: transparent;
+    color: #C46F65;
+
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.voice-delete svg {
+    width: 21px;
+    height: 21px;
+}
+
+.voice-delete:hover {
+    color: #B85C57;
+    transform: scale(1.1);
+}
+
+.voice-delete:active {
+    color: #963F3B;
+    transform: scale(0.9);
 }
 
 /* 小さいスマホ */
